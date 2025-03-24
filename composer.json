@@ -1,5 +1,5 @@
 {
-    "name": "laundry",
+    "name": "laundry/ussd",
     "description": "A simple USSD application",
     "require": {
         "php": "8.1.*",
