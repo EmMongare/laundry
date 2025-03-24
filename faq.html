@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs - Laundry Management System</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #007bff;       
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            text-align: center;
+            background-color: #333;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 8px 16px;
+            font-size: 18px;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .faq-container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .faq-item {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+        .faq-question {
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+        }
+        .faq-answer {
+            display: none;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Frequently Asked Questions</h1>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Our Services</a>
+    <a href="contact.html">Contact Us</a>
+    <a href="signup.html">Sign Up</a>
+    <a href="login.html">Log In</a>
+</nav>
+
+<div class="faq-container">
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleAnswer(this)">How do I place a laundry order? <span>+</span></div>
+        <div class="faq-answer">You can place an order by logging into your account and selecting the services you need.</div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleAnswer(this)">How can I track my laundry status? <span>+</span></div>
+        <div class="faq-answer">Once your order is placed, you can track its status in your dashboard.</div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleAnswer(this)">What payment methods are accepted? <span>+</span></div>
+        <div class="faq-answer">We accept M-Pesa payments through USSD integration.</div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleAnswer(this)">What are your operating hours? <span>+</span></div>
+        <div class="faq-answer">We operate from 8:00 AM to 8:00 PM, Monday to Saturday.</div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleAnswer(this)">How does the USSD integration work? <span>+</span></div>
+        <div class="faq-answer">You can dial our USSD code, follow the prompts to place an order, and make payments via M-Pesa.</div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleAnswer(this)">Can I schedule a pickup and delivery? <span>+</span></div>
+        <div class="faq-answer">Yes, our system allows you to schedule laundry pickup and delivery at your convenience.</div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleAnswer(this)">What happens if I miss my delivery? <span>+</span></div>
+        <div class="faq-answer">If you miss a delivery, our support team will contact you to reschedule at a convenient time.</div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleAnswer(this)">Do you offer express laundry services? <span>+</span></div>
+        <div class="faq-answer">Yes, we offer same-day express laundry services at an additional cost.</div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleAnswer(this)">Is there a customer support team available? <span>+</span></div>
+        <div class="faq-answer">Yes, our support team is available during operating hours to assist with any queries or issues.</div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleAnswer(this)">Can I cancel or modify my order? <span>+</span></div>
+        <div class="faq-answer">Yes, you can cancel or modify your order before it is processed through your account dashboard.</div>
+    </div>
+</div>
+
+<script>
+    function toggleAnswer(element) {
+        let answer = element.nextElementSibling;
+        let symbol = element.querySelector('span');
+        if (answer.style.display === "block") {
+            answer.style.display = "none";
+            symbol.textContent = "+";
+        } else {
+            answer.style.display = "block";
+            symbol.textContent = "-";
+        }
+    }
+</script>
+
+</body>
+</html>
